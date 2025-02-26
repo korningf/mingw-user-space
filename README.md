@@ -15,8 +15,8 @@
 
 #=============================================================================#
 
-```	
-	
+```    
+    
 
 Manufakture mingw utilities in user-space on secondary drive (L:)
 
@@ -29,13 +29,13 @@ Manufakture mingw utilities in user-space on secondary drive (L:)
 #-----------------------------------------------------------------------------#
 
 
-	This is an alternative setup to get a Mingw POSIX cloud developement box.
+  This is an alternative setup to get a Mingw POSIX cloud developement box.
 
   If cygwin user-space is not available, we do it in Mingw (Mingw64, Mingw32).
 
   For maximum compatibility, we use GitBash, which already packages Ming64.
   
-	Manufacture mingw installs almost programatically from within an admin shell.
+  Manufacture mingw installs almost programatically from within an admin shell.
 
 
 #-----------------------------------------------------------------------------#
@@ -43,59 +43,78 @@ Manufakture mingw utilities in user-space on secondary drive (L:)
 #-----------------------------------------------------------------------------#
 
 
-	Capabilities:
-		
-		- POSIX unified directory file structure
-		- sysinternals binaries and applications
-		- junction, mklink, psexec, pskill, pslist, psfile, pspasswd
-		- zip/unzip, gzip/gunzip, bzip/bunzip
-		- httpget, pathed, su
+    Capabilities:
+        
+        - POSIX unified directory file structure
+        - sysinternals binaries and applications
+        - junction, mklink, psexec, pskill, pslist, psfile, pspasswd
+        - zip/unzip, gzip/gunzip, bzip/bunzip
+        - httpget, pathed, su
 
 
 #-----------------------------------------------------------------------------#
 # POSIX Structure:
 #-----------------------------------------------------------------------------#
 
-	POSIX Structure:
+    POSIX Structure:
 
-		/windows/		windows installation
-		/syswin/		syswin binaries
-  	/cygwin/		cygwin binaries 
-		/mingw/		  mingw binaries
+        /windows/         windows installation
+        /syswin/          syswin binaries
+        /cygwin/          cygwin binaries ?
+        /mingw/           mingw binaries
 
-		/				    main mingw mountpoint 
-		/mnt/			  additional mountpoints
-		cygdrive/		mounted windows drives
+        /                 main mingw mountpoint 
+        /mnt/             additional mountpoints
+        cygdrive/         mounted cygwin drives ?
 
-		dev/			  devices (virtual)
-		proc/			  processes (virtual)
+        dev/              devices (virtual)
+        proc/             processes (virtual)
 
-		var/			  var files (permanent)
-		tmp/			  tmp files (volatile)
-		
-		etc/			  configuration files
-		lib/			  runtime libraries
+        var/              var files (permanent)
+        tmp/              tmp files (volatile)
+        
+        etc/              configuration files
+        lib/              runtime libraries
 
-		usr/			  user programs
-		bin/			  user binaries
-		sbin/			  admin binaries	
-		setup/			setup directory
-		
-		home/			  posix user profiles
-		users/			windows user profiles
-		
-		vault/			private passwd vault
-		work/			  work apps and workspaces
-		
-		share/			shared data, libs, programs 
-		srv/			  shared public data, servers
-	
+        usr/              user programs
+        bin/              user binaries
+        sbin/             admin binaries    
+        setup/            setup directory
+        
+        home/             posix user profiles
+        users/            windows user profiles
+        
+        vault/            private passwd vault
+        work/             work apps and workspaces
+        
+        share/            shared data, libs, programs 
+        srv/              shared public data, servers
+    
+
+#-----------------------------------------------------------------------------#
+# Design:
+#-----------------------------------------------------------------------------#
+
+GitBash / MSys / MingW provides a bash shell, git, and a minimal toolchain.
+
+Unlike Cygwin it is not a full POSIX environmment nor is it a distribution.
+
+We have to install a bunch of stuff to make it somewhat usable for cloudops.
+
+At minimum we want openssh, openssl, gnutls, gnupg, git, pass, and a vault.
+
+we will want a complete gnu posix toolchain to build gcc-glibc-mingw binaries.
+
+In addition to C/C++ and C# .NET, we want perl, python, php, ruby, go, java.
+
+We want vagrant, puppet, docker, kubernetes, terraform, aws-cli, azure-cli.
+
 
 #-----------------------------------------------------------------------------#
 # Requirements:
 #-----------------------------------------------------------------------------#
 
-	Requirements:
+    Requirements:
 
     - windows 10/11  x86 or x64(recommended) 
     
@@ -108,7 +127,7 @@ Manufakture mingw utilities in user-space on secondary drive (L:)
     - space for syswin in the default drive c:\syswin
     
     
-	Prerequisites:
+    Prerequisites:
 
     - GitBash already installed with symlinks
 
@@ -130,18 +149,21 @@ Manufakture mingw utilities in user-space on secondary drive (L:)
 # Installation:
 #-----------------------------------------------------------------------------#
 
-	Installation:
+    Installation:
         
     - from an interactive admininstrator shell run mingw-install.bat
 
-		mingw-install.bat
+        mingw-install.bat
 
-	
+    
 
 
 #-----------------------------------------------------------------------------#
 # Configuration:
 #-----------------------------------------------------------------------------#
+
+
+
 
 
 
