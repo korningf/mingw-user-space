@@ -53,6 +53,21 @@ Manufakture mingw utilities in user-space on secondary drive (L:)
 
 
 #-----------------------------------------------------------------------------#
+# POSIX root:
+#-----------------------------------------------------------------------------#
+
+User-space GitBash Mingw places its root in user `AppData/Local/Programs/Git`.
+
+Shared-space GitBash Mingw places its POSIX root dir in `Program Files/Git`.
+
+Standalone MingW likely lives in 'c:/MinGW`, occasionally in 'c:/Mingw64`. 
+
+If cygwin lives in tandem, it may be useful to make a few reciprocal junctions.
+
+
+
+
+#-----------------------------------------------------------------------------#
 # POSIX Structure:
 #-----------------------------------------------------------------------------#
 
@@ -60,12 +75,11 @@ Manufakture mingw utilities in user-space on secondary drive (L:)
 
         /windows/         windows installation
         /syswin/          syswin binaries
-        /cygwin/          cygwin binaries ?
-        /mingw/           mingw binaries
+        /cygwin/          cygwin root ?
+        /mingw/           mingw root 
 
         /                 main mingw mountpoint 
         /mnt/             additional mountpoints
-        cygdrive/         mounted cygwin drives ?
 
         dev/              devices (virtual)
         proc/             processes (virtual)
