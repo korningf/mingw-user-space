@@ -60,7 +60,7 @@ User-space GitBash Mingw places its root in user `AppData/Local/Programs/Git`.
 
 Shared-space GitBash Mingw places its POSIX root dir in `Program Files/Git`.
 
-Standalone MingW likely lives in 'c:/MinGW`, occasionally in 'c:/Mingw64`. 
+Standalone MingW likely lives in `c:/MinGW`, occasionally in `c:/Mingw64`. 
 
 If cygwin lives in tandem, it may be useful to make a few reciprocal junctions.
 
